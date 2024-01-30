@@ -8,14 +8,17 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Portfolio",
+  title: "Nirex",
   description: "Nirex portfolio",
+  icons: {
+    icon: "/favion.icon",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>{children}</body>
-    </html>
+      <html lang="en">
+        <body className={poppins.className}>{children}</body>
+      </html>
   );
 }

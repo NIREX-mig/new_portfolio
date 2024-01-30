@@ -16,8 +16,8 @@ module.exports = {
         'tdark' : '#050316',
         'blight' : '#fbfbfe',
         'bdark' : '#010104',
-        'primary' : '#725cde',
-        'secondary' : '#3dffbb',
+        'primary' : '#7510f7',
+        'secondary' : '#5be9b9',
         'accent' : '#05c1de'
       }
     },

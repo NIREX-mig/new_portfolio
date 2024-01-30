@@ -1,7 +1,7 @@
 export default function Contect(){
     return (
-        <div> 
+        <section className="h-screen"> 
             Contect
-        </div>
+        </section>
     )
 }
