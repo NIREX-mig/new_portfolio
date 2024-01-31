@@ -5,7 +5,7 @@ const Topproject = () => {
   return (
     <seciton className=" flex flex-col items-center border py-20">
       <h3 className="capitalize text-4xl font-bold text-center font-[EuroStyle Normal] pb-4 line">my projects</h3>
-      <p className="text-xl text-center text-gray-700 pb-10 px-5">Here are a few past design projects I've worked on.</p>
+      <p className="text-xl text-center text-gray-700 pb-10 px-5">Here are a few past design projects I&#39;ve worked on.</p>
       <div className="p-2 flex flex-wrap lg:w-[95%] w-[98%] gap-5 justify-center mx-auto">
         <Card/>
         <Card/>
