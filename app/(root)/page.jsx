@@ -1,9 +1,9 @@
-import AboutSelf from "@/components/AboutSelf";
-import Collaboration from "@/components/Collaboration";
-import Hello from "@/components/Hello";
-import Techstack from "@/components/Techstack";
-import Testimonial from "@/components/Testimonial";
-import Topproject from "@/components/Topproject";
+import AboutSelf from "@/Components/AboutSelf";
+import Collaboration from "@/Components/Collaboration";
+import Hello from "@/Components/Hello";
+import Techstack from "@/Components/Techstack";
+import Testimonial from "@/Components/Testimonial";
+import Topproject from "@/Components/Topproject";
 
 
 
