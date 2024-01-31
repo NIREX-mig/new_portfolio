@@ -14,7 +14,7 @@ const Topproject = () => {
         <Card/>
         <Card/>
       </div>
-      <Link href="/projects" className="pt-10">
+      <Link href="#" className="pt-10">
       <button type="button" className="capitalize border-[3px] rounded-full py-4 px-10 text-xl border-primary mx-auto text-primary hover:bg-primary hover:text-tlight ">show more</button>
       </Link>
     </seciton>

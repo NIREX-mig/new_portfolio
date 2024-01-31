@@ -4,4 +4,4 @@ export default function resume(){
             <h3 className="text-2xl font-[EuroStyle Normal] font-bold text-center ">Resume</h3>
         </section>
     );
-}
+}  

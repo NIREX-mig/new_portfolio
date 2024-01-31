@@ -16,39 +16,40 @@ const Navbar = () => {
           <Image src="/assets/logo.png" alt="logo" width={110} height={110} />
         </Link>
 
-        <div className="hidden lg:flex gap-2 justify-center items-center">
-          <nav>
-            <Link
-              href="/resume"
-              className="font-semibold pr-5 hover:text-primary hover:underline "
-            >
-              Resume
-            </Link>
-          </nav>
-          <nav>
-            <Link href="/contect">
-              <button
-                type="button"
-                className="border-[3px]  capitalize text-xl border-primary text-primary rounded-full px-4 py-2 hover:bg-primary hover:text-tlight"
+        <div className="flex gap-2 items-center">
+          <div className="hidden lg:flex gap-2 justify-center items-center">
+            <nav>
+              <Link
+                href="/resume"
+                className="font-semibold pr-5 hover:text-primary hover:underline "
               >
-                say hello
-              </button>
-            </Link>
-          </nav>
-          {!darkMode ? (
-            <MdLightMode
-              className="cursor-pointer"
-              size={30}
-              onClick={() => setDarkMode(!darkMode)}
-            />
-          ) : (
-            <MdDarkMode
-              className="cursor-pointer"
-              size={30}
-              onClick={() => setDarkMode(!darkMode)}
-            />
-          )}
-        </div>
+                Resume
+              </Link>
+            </nav>
+            <nav>
+              <Link href="/contect">
+                <button
+                  type="button"
+                  className="border-[3px]  capitalize text-xl border-primary text-primary rounded-full px-4 py-2 hover:bg-primary hover:text-tlight"
+                >
+                  say hello
+                </button>
+              </Link>
+            </nav>
+          </div>
+        {!darkMode ? (
+          <MdLightMode
+            className="cursor-pointer"
+            size={30}
+            onClick={() => setDarkMode(!darkMode)}
+          />
+        ) : (
+          <MdDarkMode
+            className="cursor-pointer"
+            size={30}
+            onClick={() => setDarkMode(!darkMode)}
+          />
+        )}
         <div
           className={`flex flex-col gap-2 cursor-pointer justify-center items-end lg:hidden w-14 ${
             menuOpen && "z-10"
@@ -68,9 +69,31 @@ const Navbar = () => {
             } duration-300`}
           ></span>
         </div>
+        </div>
       </div>
       {menuOpen && (
-        <section className="absolute top-2 right-2 w-[60%] h-[70%] rounded-3xl bg-secondary bg-opacity-70"></section>
+        <section className="absolute lg:hidden top-5 right-4 w-[35%] h-[60%] rounded-xl  backdrop-blur-lg bg-accent/40">
+          <div className="w-full mt-14 p-5 flex flex-col justify-center items-center border-t-[1px] border-gray-200">
+            <nav className="py-2">
+              <Link
+                href="/resume"
+                className="font-semibold pr-5 hover:text-primary hover:underline "
+              >
+                Resume
+              </Link>
+            </nav>
+            <nav className="py-2">
+              <Link href="/contect">
+                <button
+                  type="button"
+                  className="border-[2px]  capitalize text-lg border-primary text-primary rounded-full px-2 py-1 hover:bg-primary hover:text-tlight"
+                >
+                  say hello
+                </button>
+              </Link>
+            </nav>
+          </div>
+        </section>
       )}
     </header>
   );

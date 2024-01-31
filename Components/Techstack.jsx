@@ -19,7 +19,7 @@ const Techstack = () => {
       </section>
       <section className="pt-8">
         <h3 className="capitalize text-3xl font-bold font-[EuroStyle Normal] pb-2 line">
-          Tools
+         Dev Tools
         </h3>
         <p className="text-lg text-gray-700 pb-8">Tools are used in working.</p>
         <div className="flex gap-5 flex-wrap">
