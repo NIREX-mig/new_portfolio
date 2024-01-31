@@ -8,13 +8,13 @@ export default function Collaboration() {
         alt="svg"
         width={100}
         height={100}
-        className="mx-auto -translate-y-16 "
+        className="mx-auto lg:-translate-y-16 -translate-y-14 p-5 "
       />
       <div className="">
-        <h3 className="text-center xl:text-3xl text-lg font-[EuroStyle Normal] ">
+        <h3 className="text-center lg:text-3xl text-base font-[EuroStyle Normal] ">
           want to descuss a startup collaboration? I&#39;m most definitely game.
         </h3>
-        <div className="w-[80%] mx-auto p-10">
+        <div className="lg:w-[80%] w-full mx-auto lg:p-10 py-5">
           <form >
             <div className="grid gap-6 py-10 md:grid-cols-2">
               <div>
@@ -50,7 +50,7 @@ export default function Collaboration() {
             </div>
             <button
               type="submit"
-              className="text-xl font-semibold text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary"
+              className="lg:text-xl text-lg text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary"
             >
               Submit
             </button>
