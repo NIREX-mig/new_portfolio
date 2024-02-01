@@ -13,7 +13,7 @@ const Navbar = () => {
     <header className="flex flex-col  py-6 lg:px-20 px-5">
       <div className="flex justify-between">
         <Link href="/">
-          <Image src="/assets/logo.png" alt="logo" width={110} height={110} />
+          <Image src="/assets/logo.png" alt="logo" width={90} height={90} priority/>
         </Link>
 
         <div className="flex gap-2 items-center">
