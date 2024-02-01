@@ -52,7 +52,7 @@ const Navbar = () => {
         )}
         <div
           className={`flex flex-col gap-2 cursor-pointer justify-center items-end lg:hidden w-14 h-12 p-2 ${
-            menuOpen && "z-10"
+            menuOpen && "z-[101]"
           } `}
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
       </div>
       {menuOpen && (
-        <section className="absolute lg:hidden top-5 right-4 w-[35%] h-[60%] rounded-xl  backdrop-blur-lg bg-accent/40">
+        <section className="absolute lg:hidden top-5 right-4 w-[90%] h-[200px] z-[100] rounded-xl  backdrop-blur-lg bg-accent/40">
           <div className="w-full mt-14 p-5 flex flex-col justify-center items-center border-t-[1px] border-gray-200">
             <nav className="py-2">
               <Link
