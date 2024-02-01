@@ -18,7 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
       <html lang="en">
-        <body className={poppins.className}>{children}</body>
+        <body className={poppins.className}>
+          {children}
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        </body>
       </html>
   );
 }
