@@ -16,11 +16,11 @@ const Testimonial = () => {
               alt="svg"
               width={100}
               height={100}
-              className="p-3"
+              className=""
             />
-            <p className=" lg:text-xl text-sm">“Nirex was a real pleasure to work with and we look forward to working with him again. He&#39;s definitely the kind of designer you can trust with a project from start to finish.”</p>
+            <p className=" lg:text-xl text-sm p-5">“Nirex was a real pleasure to work with and we look forward to working with him again. He&#39;s definitely the kind of designer you can trust with a project from start to finish.”</p>
             <div className="flex flex-col justify-center items-center">
-            <h3 className="text-xl font-bold">Pascal Tremblay</h3>
+            <h3 className="lg:text-xl text-lg font-bold">Pascal Tremblay</h3>
             <p className="text-sm">Nyrex devloper</p>
             </div>
           </swiper-slide>
@@ -32,9 +32,9 @@ const Testimonial = () => {
               height={100}
               className=""
             />
-            <p className="p-5 text-xl">“Nirex was a real pleasure to work with and we look forward to working with him again. He&#39;s definitely the kind of designer you can trust with a project from start to finish.”</p>
+            <p className="p-5 lg:text-xl text-sm">“Nirex was a real pleasure to work with and we look forward to working with him again. He&#39;s definitely the kind of designer you can trust with a project from start to finish.”</p>
             <div className="flex flex-col justify-center items-center">
-            <h3 className="text-xl font-bold">Pascal Tremblay</h3>
+            <h3 className="lg:text-xl text-lg font-bold">Pascal Tremblay</h3>
             <p className="text-sm">Nyrex devloper</p>
             </div>
           </swiper-slide>
