@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Nirex",
+  title: "Nirex - Portfolio",
   description: "Nirex portfolio",
   icons: {
     icon: "/favion.icon",
@@ -25,8 +25,6 @@ export default function RootLayout({ children }) {
           initialPosition={0.08}
           crawlSpeed={200}
           height={3}
-          crawl={true}
-          showSpinner={true}
           easing="ease"
           speed={200}
           shadow="0 0 10px #2299DD,0 0 5px #2299DD"
