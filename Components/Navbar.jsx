@@ -6,22 +6,34 @@ import { useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+  const [mode ,setMode] = useState("light")
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode)
+    darkMode ? setMode("light") : setMode("dark");
+
+    if (window.matchMedia(`(prefers-color-scheme: ${mode})`).matches) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+
   return (
-    <header className="flex flex-col  py-6 lg:px-20 px-5">
-      <div className="flex justify-between">
+    <header className="flex flex-col  py-6 lg:px-20 px-5 dark:bg-black">
+      <div className="flex justify-between dark:bg-black">
         <Link href="/">
-          <Image src="/assets/logo.png" alt="logo" width={90} height={90} priority/>
+          <Image src="/assets/logo.png" alt="logo" width={90} height={90} priority className="dark:invert"/>
         </Link>
 
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center dark:bg-black">
           <div className="hidden lg:flex gap-2 justify-center items-center">
             <nav>
               <Link
                 href="/resume"
-                className="font-semibold pr-5 hover:text-primary hover:underline "
+                className="font-semibold pr-5 hover:text-primary hover:underline dark:text-white "
               >
                 Resume
               </Link>
@@ -41,13 +53,13 @@ const Navbar = () => {
           <MdLightMode
             className="cursor-pointer"
             size={30}
-            onClick={() => setDarkMode(!darkMode)}
+            onClick={handleDarkMode}
           />
         ) : (
           <MdDarkMode
             className="cursor-pointer"
             size={30}
-            onClick={() => setDarkMode(!darkMode)}
+            onClick={handleDarkMode}
           />
         )}
         <div

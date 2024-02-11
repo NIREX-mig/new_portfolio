@@ -1,14 +1,14 @@
 import Image from "next/image";
 const Testimonial = () => {
   return (
-    <section className="border py-36">
-      <h3 className="lg:text-4xl text-xl font-bold font-[EuroStyle Normal] text-center pb-4">
+    <section className="border py-36 dark:bg-black">
+      <h3 className="lg:text-4xl text-xl font-bold font-[EuroStyle Normal] text-center pb-4 dark:text-white">
         Testimonials
       </h3>
-      <p className="lg:text-xl text-sm text-center text-gray-700 pb-10 px-10">
+      <p className="lg:text-xl text-sm text-center text-gray-700 pb-10 px-10 dark:text-white">
         People I&#39;ve worked with have said some nice things...
       </p>
-      <div className="w-full lg:w-[75%] mx-auto">
+      <div className="w-full lg:w-[75%] mx-auto dark:bg-black">
         <swiper-container className="mySwiper" pagination="true">
           <swiper-slide >
             <Image
@@ -17,11 +17,11 @@ const Testimonial = () => {
               width={100}
               height={100}
               className=""
-            />
-            <p className=" lg:text-xl text-sm p-5">“Nirex was a real pleasure to work with and we look forward to working with him again. He&#39;s definitely the kind of designer you can trust with a project from start to finish.”</p>
+              />
+            <p className=" lg:text-xl text-sm p-5 dark:text-white">“Nirex was a real pleasure to work with and we look forward to working with him again. He&#39;s definitely the kind of designer you can trust with a project from start to finish.”</p>
             <div className="flex flex-col justify-center items-center">
-            <h3 className="lg:text-xl text-lg font-bold">Pascal Tremblay</h3>
-            <p className="text-sm">Nyrex devloper</p>
+            <h3 className="lg:text-xl text-lg font-bold dark:text-white">Pascal Tremblay</h3>
+            <p className="text-sm dark:text-white">Nyrex devloper</p>
             </div>
           </swiper-slide>
           <swiper-slide >
