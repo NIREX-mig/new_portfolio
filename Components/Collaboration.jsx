@@ -3,7 +3,7 @@ import { MdChat } from "react-icons/md";
 
 const Collaboration = () => {
   return (
-    <section className="border flex flex-col items-center px-5 dark:bg-black ">
+    <section className="border flex flex-col items-center px-5 dark:bg-black dark:border-gray-800 ">
       <h3 className="text-center pb-5 mt-20 lg:text-2xl text-lg text-gray-900 font-semibold dark:text-white ">Interested in collaborating with me?</h3>
       <p className="text-center pb-20 lg:text-lg text-sm font-semibold text-gray-800 dark:text-white">I&#39;m always open to discussing product design work or partnership opportunities.</p>
       <Link href="/collaboration">

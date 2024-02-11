@@ -20,7 +20,7 @@ export default function resume() {
           <div className="border p-3">
             <div className="flex items-center lg:gap-5 gap-3 dark:text-white">
               <div className="bg-secondary flex justify-center items-center lg:w-10 lg:h-10  w-8 h-8 p-2 rounded-full">
-                <FaBookOpen size={25} className="w-5 h-5" className="dark:fill-black" />
+                <FaBookOpen size={25} className="w-5 h-5 dark:fill-black" />
               </div>
               <h3 classame="">Technical Knowledge</h3>
             </div>

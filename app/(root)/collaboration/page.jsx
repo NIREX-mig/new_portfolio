@@ -15,6 +15,12 @@ export default function Collaboration() {
 
   }
 
+  const onChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormData({...formData, [name] : value});
+  }
+
   const onSubmit = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -22,7 +28,7 @@ export default function Collaboration() {
   }
 
   return (
-    <section className="px-10 border-2 pb-32">
+    <section className="px-10 pb-32 dark:bg-black">
       <Image
         src="/assets/nirex-avatar.svg"
         alt="svg"
@@ -31,7 +37,7 @@ export default function Collaboration() {
         className="mx-auto lg:-translate-y-16 -translate-y-14 p-5 lg:p-0 "
       />
       <div className="">
-        <h3 className="text-center lg:text-3xl text-base font-[EuroStyle Normal] ">
+        <h3 className="text-center lg:text-3xl text-base font-[EuroStyle Normal] dark:text-white ">
           want to descuss a startup collaboration? I&#39;m most definitely game.
         </h3>
         <div className="lg:w-[80%] w-full mx-auto lg:p-10 py-5">
@@ -40,7 +46,7 @@ export default function Collaboration() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-sm font-medium text-gray-900"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   Name
                 </label>
@@ -50,7 +56,7 @@ export default function Collaboration() {
                   name="name"
                   value={formData.name}
                   onChange={onChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:text-white"
                   placeholder="Name"
                   required
                 />
@@ -58,7 +64,7 @@ export default function Collaboration() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   Email address
                 </label>
@@ -68,7 +74,7 @@ export default function Collaboration() {
                   name="email"
                   value={formData.email}
                   onChange={onChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-800 dark:text-white"
                   placeholder="example@company.com"
                   required
                 />
@@ -76,7 +82,7 @@ export default function Collaboration() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block mb-2 text-sm font-medium text-gray-900"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   Your message
                 </label>
@@ -86,7 +92,7 @@ export default function Collaboration() {
                   name="message"
                   value={formData.message}
                   onChange={onChange}
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 dark:bg-gray-800 dark:text-white"
                   placeholder="Write your thoughts here..."
                   required
                 ></textarea>

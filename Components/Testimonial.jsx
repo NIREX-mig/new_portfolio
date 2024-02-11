@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Testimonial = () => {
   return (
-    <section className="border py-36 dark:bg-black">
+    <section className="border py-36 dark:bg-black dark:border-gray-800">
       <h3 className="lg:text-4xl text-xl font-bold font-[EuroStyle Normal] text-center pb-4 dark:text-white">
         Testimonials
       </h3>

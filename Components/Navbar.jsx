@@ -6,23 +6,16 @@ import { useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(true);
-  const [mode ,setMode] = useState("light")
+  const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode)
-    darkMode ? setMode("light") : setMode("dark");
-
-    if (window.matchMedia(`(prefers-color-scheme: ${mode})`).matches) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
+    darkMode ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark')
   }
 
   return (
-    <header className="flex flex-col  py-6 lg:px-20 px-5 dark:bg-black">
+    <header className="flex flex-col border-b border-gray-200  py-6 lg:px-20 px-5 dark:bg-black dark:border-b-[1px] dark:border-gray-800">
       <div className="flex justify-between dark:bg-black">
         <Link href="/">
           <Image src="/assets/logo.png" alt="logo" width={90} height={90} priority className="dark:invert"/>
@@ -49,9 +42,9 @@ const Navbar = () => {
               </Link>
             </nav>
           </div>
-        {!darkMode ? (
+        {darkMode ? (
           <MdLightMode
-            className="cursor-pointer"
+            className="cursor-pointer dark:fill-white"
             size={30}
             onClick={handleDarkMode}
           />
