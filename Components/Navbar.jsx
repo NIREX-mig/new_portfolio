@@ -66,12 +66,12 @@ const Navbar = () => {
               menuOpen ? "w-[80%]" : "w-full"
             } h-1 rounded-full ${
               menuOpen && "rotate-45 translate-y-2 duration-300"
-            } duration-300`}
+            } duration-300 dark:bg-white`}
           ></span>
           <span
             className={`bg-black w-[80%] h-1 rounded-full ${
               menuOpen && "-rotate-45 -translate-y-1 duration-300"
-            } duration-300`}
+            } duration-300 dark:bg-white`}
           ></span>
         </div>
         </div>
