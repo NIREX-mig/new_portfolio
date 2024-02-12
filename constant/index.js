@@ -22,6 +22,7 @@ export const techStacks = [
   {
     alt: "Next-js",
     src: "/assets/nextjs.svg",
+    style: "invert"
   },
   {
     alt: "tailwind",
@@ -38,6 +39,7 @@ export const techStacks = [
   {
     alt: "express js",
     src: "/assets/express.svg",
+    style: "invert"
   },
   {
     alt: "mongo db",
@@ -57,6 +59,7 @@ export const techtools = [
   {
     alt: "github",
     src: "/assets/github.svg",
+    style: "invert"
   },
   {
     alt: "npm",

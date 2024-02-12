@@ -1,13 +1,17 @@
 "use client";
 
+// import Globalstate from "@/context/State";
+import globalContext from "@/context/context";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Navbar = () => {
+  const context = useContext(globalContext);
+  const {menuIsOpen, setMenuIsOpen} = context;
+  
   const [darkMode, setDarkMode] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode)
@@ -57,26 +61,26 @@ const Navbar = () => {
         )}
         <div
           className={`flex flex-col gap-2 cursor-pointer justify-center items-end lg:hidden w-14 h-12 p-2 ${
-            menuOpen && "z-[101]"
+            menuIsOpen && "z-[101]"
           } `}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuIsOpen(!menuIsOpen)}
         >
           <span
             className={`bg-black ${
-              menuOpen ? "w-[80%]" : "w-full"
+              menuIsOpen ? "w-[80%]" : "w-full"
             } h-1 rounded-full ${
-              menuOpen && "rotate-45 translate-y-2 duration-300"
+              menuIsOpen && "rotate-45 translate-y-2 duration-300"
             } duration-300 dark:bg-white`}
           ></span>
           <span
             className={`bg-black w-[80%] h-1 rounded-full ${
-              menuOpen && "-rotate-45 -translate-y-1 duration-300"
+              menuIsOpen && "-rotate-45 -translate-y-1 duration-300"
             } duration-300 dark:bg-white`}
           ></span>
         </div>
         </div>
       </div>
-      {menuOpen && (
+      {menuIsOpen && (
         <section className="absolute lg:hidden top-5 right-4 w-[90%] h-[200px] z-[100] rounded-xl  backdrop-blur-lg bg-accent/40">
           <div className="w-full mt-14 p-5 flex flex-col justify-center items-center border-t-[1px] border-gray-200">
             <nav className="py-2">

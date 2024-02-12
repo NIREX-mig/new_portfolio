@@ -21,7 +21,7 @@ const Techstack = () => {
                   alt={techstack.alt}
                   width={100}
                   height={100}
-                  className="p-3 "
+                  className={`p-3 dark:${techStacks.style}`}
                 />
               );
             })}
@@ -43,7 +43,7 @@ const Techstack = () => {
                   alt={techstack.alt}
                   width={100}
                   height={100}
-                  className="p-3 "
+                  className={`p-3 dark:${techStacks.style}`}
                 />
               );
             })}

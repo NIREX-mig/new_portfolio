@@ -1,7 +1,8 @@
 "use client";
 
+import globalContext from "@/context/context";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function Contect() {
 
@@ -10,6 +11,10 @@ export default function Contect() {
     email :"",
     message :""
   })
+  const {menuIsOpen, setMenuIsOpen} = useContext(globalContext);
+  useEffect(()=>{
+    setMenuIsOpen(!menuIsOpen);
+  },[])
 
   const handleSubmit = async () => {
     

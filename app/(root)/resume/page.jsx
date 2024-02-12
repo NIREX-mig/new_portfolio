@@ -1,8 +1,17 @@
+"use client";
+
+import globalContext from "@/context/context";
 import Image from "next/image";
+import { useContext, useEffect } from "react";
 import { FaBookOpen } from "react-icons/fa";
 import { PiGraduationCapFill } from "react-icons/pi";
 
 export default function resume() {
+  const { menuIsOpen, setMenuIsOpen } = useContext(globalContext);
+
+  useEffect(() => {
+    setMenuIsOpen(!menuIsOpen);
+  },[]);
   return (
     <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-black">
       <div className="flex xl:flex-row flex-col shadow-lg rounded-lg dark:bg-black">
@@ -37,12 +46,12 @@ export default function resume() {
           <div className="border p-3 dark:border-gray-700">
             <div className="flex items-center lg:gap-5 gap-3 dark:text-white">
               <div className="bg-secondary  flex justify-center items-center lg:w-10 lg:h-10  w-8 h-8 p-2 rounded-full">
-                <PiGraduationCapFill size={25} className="dark:fill-black"/>
+                <PiGraduationCapFill size={25} className="dark:fill-black" />
               </div>
               <h3 classame="">Education</h3>
             </div>
             <div className="p-5 dark:bg-blac ">
-              <ul className={"list-disc list-inside text-sm dark:text-white" }>
+              <ul className={"list-disc list-inside text-sm dark:text-white"}>
                 <li>Bacholar of Computer Applications</li>
                 <p className="pt-2 px-6">C.M College,Darbhanga</p>
                 <p className="px-6">Lalit Narayan Mithila University</p>
