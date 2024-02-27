@@ -12,12 +12,22 @@ export default function Contect() {
     message :""
   })
   const {menuIsOpen, setMenuIsOpen} = useContext(globalContext);
+
   useEffect(()=>{
     setMenuIsOpen(!menuIsOpen);
   },[])
 
-  const handleSubmit = async () => {
-    
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contect`,{
+      method : "POST",
+      headers : {
+        "Content-Type" : "application/json",
+      },
+      body : JSON.stringify({name : formData.name, email : formData.email, message : formData.message})
+    })
+    const data = await res.json();
+    setFormData({name : "", email : "", message : ""}); 
   }
 
   const onChange = (e) => {

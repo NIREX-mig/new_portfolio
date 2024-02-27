@@ -12,8 +12,17 @@ export default function Collaboration() {
     message :""
   })
 
-  const handleSubmit = () => {
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/collaboration`,{
+      method : "POST",
+      headers : {
+        "Content-Type" : "application/json",
+      },
+      body : JSON.stringify({name : formData.name, email : formData.email, message : formData.message})
+    })
+    const data = await res.json();
+    setFormData({name : "", email : "", message : ""}); 
   }
 
   const onChange = (e) => {
@@ -22,11 +31,6 @@ export default function Collaboration() {
     setFormData({...formData, [name] : value});
   }
 
-  const onSubmit = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setFormData({...formData , [name] : value });
-  }
 
   return (
     <section className="px-10 pb-32 dark:bg-black">
@@ -42,7 +46,7 @@ export default function Collaboration() {
           want to descuss a startup collaboration? I&#39;m most definitely game.
         </h3>
         <div className="lg:w-[80%] w-full mx-auto lg:p-10 py-5">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="grid gap-6 py-10 md:grid-cols-2">
               <div>
                 <label
