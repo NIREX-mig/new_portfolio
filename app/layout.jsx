@@ -12,7 +12,7 @@ export const metadata = {
   title: "Nirex - Portfolio",
   description: "Nirex portfolio",
   icons: {
-    icon: "/favion.icon",
+    icon: "/favicon.ico",
   },
 };
 

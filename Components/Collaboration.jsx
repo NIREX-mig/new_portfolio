@@ -14,7 +14,7 @@ const Collaboration = () => {
       <Link href="/collaboration">
         <button
           type="button"
-          className=" flex gap-3 items-center mx-auto border-[3px] text-primary border-primary hover:bg-primary hover:text-tlight rounded-full px-10 py-3 lg:text-xl text-sm mb-20"
+          className=" flex gap-3 items-center mx-auto border-[3px] text-primary border-primary hover:bg-primary hover:text-tlight rounded-full px-10 py-3 lg:text-xl text-sm mb-20 dark:text-white"
         >
           <MdChat size={25} />
           Start a conversation

@@ -114,7 +114,7 @@ export default function Contect() {
             </div>
             <button
               type="submit"
-              className="lg:text-xl text-lg text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary"
+              className="lg:text-xl text-lg text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary dark:text-white"
             >
               Submit
             </button>

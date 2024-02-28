@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="flex justify-between dark:bg-bdark">
         <Link href="/">
           <Image
-            src="/assets/logo.png"
+            src="/logo_light.png"
             alt="logo"
             width={90}
             height={90}
@@ -35,10 +35,10 @@ const Navbar = () => {
 
         <div className="flex gap-2 items-center dark:bg-bdark">
           <div className="hidden lg:flex gap-2 justify-center items-center">
-            <nav>
+            <nav className="hover:text-primary">
               <Link
                 href="/resume"
-                className="font-semibold pr-5 hover:text-primary hover:underline dark:text-white "
+                className="text-xl pr-5 hover:text-secondry dark:text-white dark:hover:text-secondary "
               >
                 Resume
               </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
               <Link href="/contect">
                 <button
                   type="button"
-                  className="border-[3px]  capitalize text-xl border-primary text-primary rounded-full px-4 py-2 hover:bg-primary hover:text-tlight"
+                  className="border-[3px] capitalize text-xl border-primary text-primary rounded-full px-7 py-2 hover:bg-primary hover:text-tlight dark:text-tlight"
                 >
                   say hello
                 </button>
@@ -89,12 +89,12 @@ const Navbar = () => {
         </div>
       </div>
       {menuIsOpen && (
-        <section className="absolute lg:hidden top-5 right-4 w-[90%] h-[200px] z-[100] rounded-xl  backdrop-blur-lg bg-accent/40">
-          <div className="w-full mt-14 p-5 flex flex-col justify-center items-center border-t-[1px] border-gray-200">
+        <section className="absolute lg:hidden top-5 right-0 w-full h-[200px] z-[100]  backdrop-blur-lg bg-accent/50">
+          <div className="w-full mt-14 p-5 flex flex-col justify-center items-center border-t-[1px] border-black">
             <nav className="py-2">
               <Link
                 href="/resume"
-                className="font-semibold pr-5 hover:text-primary hover:underline "
+                className="text-xl font-bold pr-5 hover:text-primary dark:text-white "
               >
                 Resume
               </Link>
@@ -103,7 +103,7 @@ const Navbar = () => {
               <Link href="/contect">
                 <button
                   type="button"
-                  className="border-[2px]  capitalize text-lg border-primary text-primary rounded-full px-2 py-1 hover:bg-primary hover:text-tlight"
+                  className="border-[3px]  capitalize text-lg border-primary text-primary rounded-full px-10 py-2 hover:bg-primary hover:text-tlight dark:text-white"
                 >
                   say hello
                 </button>

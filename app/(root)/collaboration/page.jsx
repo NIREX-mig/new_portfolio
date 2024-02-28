@@ -112,7 +112,7 @@ export default function Collaboration() {
             </div>
             <button
               type="submit"
-              className="lg:text-xl text-lg text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary dark:bg-primary dark:text-white"
+              className="lg:text-xl text-lg text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary dark:text-white"
             >
               Submit
             </button>

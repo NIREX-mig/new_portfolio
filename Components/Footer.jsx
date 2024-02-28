@@ -8,9 +8,9 @@ const Footer = () => {
       <Socialcontect />
       <div className="flex flex-col items-center lg:w-[35%] w-[60%]  mx-auto mb-3">
         <Link href="/" className="p-8">
-          <Image src="/assets/logo.png" alt="logo" width={110} height={110} className="invert p-2" />
+          <Image src="/logo_dark.png" alt="logo" width={110} height={110} className=" p-2" />
         </Link>
-        <h3 className=";g:text-xl text-sm p-8 text-center">
+        <h3 className="lg:text-xl text-sm p-8 text-center">
           Living, learning, & leveling up one day at a time.
         </h3>
       </div>
