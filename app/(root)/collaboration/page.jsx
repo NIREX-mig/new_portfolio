@@ -2,17 +2,33 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import { array, z } from "zod";
 
 export default function Collaboration() {
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  let loading = false;
+
+  const error = [];
+
+  const Data = z.object({
+    name : z.string().min(3),
+    email : z.string().email(),
+    message : z.string().min(10)
+  })
+  const validateFormData = (input) =>{
+    const isValidData = Data.safeParse({name : input.name, email : input.email, message : input.message})
+    return isValidData.error;
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validation = validateFormData(formData);
+    console.log(validation)
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/collaboration`,
       {
@@ -28,7 +44,32 @@ export default function Collaboration() {
       }
     );
     const data = await res.json();
-    setFormData({ name: "", email: "", message: "" });
+
+    if(data.success){
+      toast.success(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    }
+    else{
+      toast.error(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
   };
 
   const onChange = (e) => {
@@ -71,6 +112,7 @@ export default function Collaboration() {
                   autoComplete="off"
                   required
                 />
+                {/* {error && <span className="error-message">{error.message}</span>} */}
               </div>
               <div>
                 <label
