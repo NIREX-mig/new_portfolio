@@ -21,7 +21,7 @@ const Testimonial = () => {
       </p>
       <div className="w-full lg:w-[75%] mx-auto dark:bg-bdark">
         <Swiper
-          className="w-[85%] dark:bg-bdark"
+          className="lg:w-[85%] w-[95%] dark:bg-bdark"
           modules={[ Pagination, Scrollbar]}
           spaceBetween={50}
           slidesPerView={1}
