@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
           shadow="0 0 10px #2299DD,0 0 5px #2299DD"
         />
         {children}
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
       </body>
     </html>
   );
