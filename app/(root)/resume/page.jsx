@@ -17,7 +17,7 @@ export default function resume() {
     <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-bdark">
       <div className="flex xl:flex-row flex-col shadow-lg rounded-lg dark:bg-bdark">
         <Image
-          src="/assets/Study.jpg"
+          src="/assets/Study.png"
           alt="technical knowlege"
           width={450}
           height={450}
