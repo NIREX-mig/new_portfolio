@@ -19,7 +19,7 @@ const Testimonial = () => {
       <p className="lg:text-xl text-sm text-center text-gray-700 pb-10 px-10 dark:text-white">
         People I&#39;ve worked with have said some nice things...
       </p>
-      <div className="w-full lg:w-[75%] mx-auto dark:bg-bdark">
+      <div className="w-full mx-auto dark:bg-bdark">
         <Swiper
           className="lg:w-[85%] w-[95%] dark:bg-bdark"
           modules={[ Pagination, Scrollbar]}
