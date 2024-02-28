@@ -12,9 +12,10 @@ export default function resume() {
   useEffect(() => {
     setMenuIsOpen(!menuIsOpen);
   },[]);
+  
   return (
-    <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-black">
-      <div className="flex xl:flex-row flex-col shadow-lg rounded-lg dark:bg-black">
+    <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-bdark">
+      <div className="flex xl:flex-row flex-col shadow-lg rounded-lg dark:bg-bdark">
         <Image
           src="/assets/Study.jpg"
           alt="technical knowlege"
@@ -22,7 +23,7 @@ export default function resume() {
           height={450}
           className=""
         />
-        <div className="grid lg:grid-cols-2 grid-row-2 dark:bg-black">
+        <div className="grid lg:grid-cols-2 grid-row-2 dark:bg-bdark">
           <div className="border p-3 dark:border-gray-700">
             <div className="flex items-center lg:gap-5 gap-3 dark:text-white">
               <div className="bg-secondary flex justify-center items-center lg:w-10 lg:h-10  w-8 h-8 p-2 rounded-full">
@@ -30,7 +31,7 @@ export default function resume() {
               </div>
               <h3 classame="">Technical Knowledge</h3>
             </div>
-            <div className="p-5 dark:bg-black">
+            <div className="p-5 dark:bg-bdark">
               <ul className={"list-disc list-inside text-sm dark:text-white"}>
                 <li>Operating System</li>
                 <li>Data Structure Using Java</li>
@@ -50,7 +51,7 @@ export default function resume() {
               </div>
               <h3 classame="">Education</h3>
             </div>
-            <div className="p-5 dark:bg-blac ">
+            <div className="p-5 dark:bg-bdark ">
               <ul className={"list-disc list-inside text-sm dark:text-white"}>
                 <li>Bacholar of Computer Applications</li>
                 <p className="pt-2 px-6">C.M College,Darbhanga</p>

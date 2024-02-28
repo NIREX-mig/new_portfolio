@@ -11,13 +11,22 @@ const Socialcontect = () => {
         <p>Interested in working together? Follow me also here </p>
       </div>
       <div className="flex gap-5 m-5">
-        <Link href="#" className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary" >
+        <Link
+          href="#"
+          className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary"
+        >
           <FaInstagram size={30} className="group-hover:fill-red-500 " />
         </Link>
-        <Link href="#" className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary" >
+        <Link
+          href="#"
+          className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary"
+        >
           <FaLinkedin size={30} className="group-hover:fill-blue-900 " />
         </Link>
-        <Link href="#" className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary"  >
+        <Link
+          href="#"
+          className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary"
+        >
           <FaGithub size={30} className="group-hover:fill-black " />
         </Link>
       </div>

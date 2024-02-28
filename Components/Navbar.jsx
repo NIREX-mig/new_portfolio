@@ -9,23 +9,31 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Navbar = () => {
   const context = useContext(globalContext);
-  const {menuIsOpen, setMenuIsOpen} = context;
-  
+  const { menuIsOpen, setMenuIsOpen } = context;
+
   const [darkMode, setDarkMode] = useState(false);
 
   const handleDarkMode = () => {
-    setDarkMode(!darkMode)
-    darkMode ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark')
-  }
+    setDarkMode(!darkMode);
+    darkMode
+      ? document.documentElement.classList.remove("dark")
+      : document.documentElement.classList.add("dark");
+  };
 
   return (
-    <header className="flex flex-col border-b border-gray-200  py-6 lg:px-20 px-5 dark:bg-black dark:border-b-[1px] dark:border-gray-800">
-      <div className="flex justify-between dark:bg-black">
+    <header className="flex flex-col border-b border-gray-200  py-6 lg:px-20 px-5 dark:bg-bdark dark:border-b-[1px] dark:border-gray-800">
+      <div className="flex justify-between dark:bg-bdark">
         <Link href="/">
-          <Image src="/assets/logo.png" alt="logo" width={90} height={90} priority className="dark:invert"/>
+          <Image
+            src="/assets/logo.png"
+            alt="logo"
+            width={90}
+            height={90}
+            priority
+          />
         </Link>
 
-        <div className="flex gap-2 items-center dark:bg-black">
+        <div className="flex gap-2 items-center dark:bg-bdark">
           <div className="hidden lg:flex gap-2 justify-center items-center">
             <nav>
               <Link
@@ -46,38 +54,38 @@ const Navbar = () => {
               </Link>
             </nav>
           </div>
-        {darkMode ? (
-          <MdLightMode
-            className="cursor-pointer dark:fill-white"
-            size={30}
-            onClick={handleDarkMode}
-          />
-        ) : (
-          <MdDarkMode
-            className="cursor-pointer"
-            size={30}
-            onClick={handleDarkMode}
-          />
-        )}
-        <div
-          className={`flex flex-col gap-2 cursor-pointer justify-center items-end lg:hidden w-14 h-12 p-2 ${
-            menuIsOpen && "z-[101]"
-          } `}
-          onClick={() => setMenuIsOpen(!menuIsOpen)}
-        >
-          <span
-            className={`bg-black ${
-              menuIsOpen ? "w-[80%]" : "w-full"
-            } h-1 rounded-full ${
-              menuIsOpen && "rotate-45 translate-y-2 duration-300"
-            } duration-300 dark:bg-white`}
-          ></span>
-          <span
-            className={`bg-black w-[80%] h-1 rounded-full ${
-              menuIsOpen && "-rotate-45 -translate-y-1 duration-300"
-            } duration-300 dark:bg-white`}
-          ></span>
-        </div>
+          {darkMode ? (
+            <MdLightMode
+              className="cursor-pointer dark:fill-white"
+              size={30}
+              onClick={handleDarkMode}
+            />
+          ) : (
+            <MdDarkMode
+              className="cursor-pointer"
+              size={30}
+              onClick={handleDarkMode}
+            />
+          )}
+          <div
+            className={`flex flex-col gap-2 cursor-pointer justify-center items-end lg:hidden w-14 h-12 p-2 ${
+              menuIsOpen && "z-[101]"
+            } `}
+            onClick={() => setMenuIsOpen(!menuIsOpen)}
+          >
+            <span
+              className={`bg-black ${
+                menuIsOpen ? "w-[80%]" : "w-full"
+              } h-1 rounded-full ${
+                menuIsOpen && "rotate-45 translate-y-2 duration-300"
+              } duration-300 dark:bg-white`}
+            ></span>
+            <span
+              className={`bg-black w-[80%] h-1 rounded-full ${
+                menuIsOpen && "-rotate-45 -translate-y-1 duration-300"
+              } duration-300 dark:bg-white`}
+            ></span>
+          </div>
         </div>
       </div>
       {menuIsOpen && (

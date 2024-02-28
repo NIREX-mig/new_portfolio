@@ -3,41 +3,43 @@
 import globalContext from "@/context/context";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
-
 export default function Contect() {
-
   const [formData, setFormData] = useState({
-    name : "",
-    email :"",
-    message :""
-  })
-  const {menuIsOpen, setMenuIsOpen} = useContext(globalContext);
+    name: "",
+    email: "",
+    message: "",
+  });
+  const { menuIsOpen, setMenuIsOpen } = useContext(globalContext);
 
-  useEffect(()=>{
+  useEffect(() => {
     setMenuIsOpen(!menuIsOpen);
-  },[])
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contect`,{
-      method : "POST",
-      headers : {
-        "Content-Type" : "application/json",
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contect`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      body : JSON.stringify({name : formData.name, email : formData.email, message : formData.message})
-    })
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
     const data = await res.json();
-    setFormData({name : "", email : "", message : ""}); 
-  }
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   const onChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setFormData({...formData, [name] :value})
-  }
+    setFormData({ ...formData, [name]: value });
+  };
 
-  return ( 
-    <section className="px-10 border-2 pb-32 dark:bg-black dark:border-black">
+  return (
+    <section className="px-10 border-2 pb-32 dark:bg-bdark dark:border-black">
       <Image
         src="/assets/nirex-avatar.svg"
         alt="svg"

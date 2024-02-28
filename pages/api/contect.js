@@ -4,6 +4,7 @@ import validator from "validator";
 export default function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, message } = req.body;
+    let success = false;
 
     if (validator.isEmpty(name)) {
       return res.status(404).json({ message: "name should not be empty" });
@@ -35,9 +36,12 @@ export default function handler(req, res) {
 
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
-        res.status(400).json({ message: "Some error occurred" });
+        success = false;
+        res.status(400).json({ success, message: "Some error occurred" });
       }
+      success = true;
       res.status(200).json({
+        success,
         message: "Send successfully",
       });
     });

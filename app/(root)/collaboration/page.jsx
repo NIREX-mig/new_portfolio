@@ -1,39 +1,44 @@
 "use client";
 
-import globalContext from "@/context/context";
 import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Collaboration() {
-
   const [formData, setFormData] = useState({
-    name : "",
-    email :"",
-    message :""
-  })
+    name: "",
+    email: "",
+    message: "",
+  });
+  let loading = false;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/collaboration`,{
-      method : "POST",
-      headers : {
-        "Content-Type" : "application/json",
-      },
-      body : JSON.stringify({name : formData.name, email : formData.email, message : formData.message})
-    })
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/collaboration`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      }
+    );
     const data = await res.json();
-    setFormData({name : "", email : "", message : ""}); 
-  }
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   const onChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setFormData({...formData, [name] : value});
-  }
-
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
-    <section className="px-10 pb-32 dark:bg-black">
+    <section className="px-10 pb-32 dark:bg-bdark">
       <Image
         src="/assets/nirex-avatar.svg"
         alt="svg"
@@ -63,6 +68,7 @@ export default function Collaboration() {
                   onChange={onChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:text-white"
                   placeholder="Name"
+                  autoComplete="off"
                   required
                 />
               </div>
@@ -81,6 +87,7 @@ export default function Collaboration() {
                   onChange={onChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-800 dark:text-white"
                   placeholder="example@company.com"
+                  autoComplete="off"
                   required
                 />
               </div>
@@ -105,7 +112,7 @@ export default function Collaboration() {
             </div>
             <button
               type="submit"
-              className="lg:text-xl text-lg text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary"
+              className="lg:text-xl text-lg text-primary  px-10 py-2 border border-primary rounded-full hover:text-tlight hover:bg-primary dark:bg-primary dark:text-white"
             >
               Submit
             </button>

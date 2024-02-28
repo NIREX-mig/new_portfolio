@@ -1,12 +1,9 @@
-import Image from "next/image"
-
+import Image from "next/image";
 
 const Card = () => {
   return (
-    <article className="w-80 lg:w-96 h-52 lg:h-56 rounded-2xl bg-secondary p-3 ">
+    <article className="w-80 lg:w-96 h-52 lg:h-56 rounded-2xl bg-dcard p-3 "></article>
+  );
+};
 
-    </article>
-  )
-}
-
-export default Card
+export default Card;
