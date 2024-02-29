@@ -3,17 +3,19 @@
 import globalContext from "@/context/context";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
+
 export default function Contect() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const { menuIsOpen, setMenuIsOpen } = useContext(globalContext);
+  const { setMenuIsOpen } = useContext(globalContext);
 
   useEffect(() => {
-    setMenuIsOpen(!menuIsOpen);
-  }, []);
+    setMenuIsOpen(false);
+  }, [setMenuIsOpen]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +31,31 @@ export default function Contect() {
       }),
     });
     const data = await res.json();
-    setFormData({ name: "", email: "", message: "" });
+    if (data.success) {
+      toast.success(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    }
+    else {
+      toast.error(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
   };
 
   const onChange = (e) => {

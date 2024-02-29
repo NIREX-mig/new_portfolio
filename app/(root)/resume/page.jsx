@@ -7,11 +7,11 @@ import { FaBookOpen } from "react-icons/fa";
 import { PiGraduationCapFill } from "react-icons/pi";
 
 export default function resume() {
-  const { menuIsOpen, setMenuIsOpen } = useContext(globalContext);
+  const { setMenuIsOpen } = useContext(globalContext);
 
   useEffect(() => {
-    setMenuIsOpen(!menuIsOpen);
-  },[]);
+    setMenuIsOpen(false);
+  },[setMenuIsOpen]);
   
   return (
     <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-bdark">

@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import globalContext from "@/context/context";
+import { useContext,useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { array, z } from "zod";
+
 
 export default function Collaboration() {
 
@@ -13,22 +14,14 @@ export default function Collaboration() {
     message: "",
   });
 
-  const error = [];
+  const { setMenuIsOpen } = useContext(globalContext);
 
-  const Data = z.object({
-    name : z.string().min(3),
-    email : z.string().email(),
-    message : z.string().min(10)
-  })
-  const validateFormData = (input) =>{
-    const isValidData = Data.safeParse({name : input.name, email : input.email, message : input.message})
-    return isValidData.error;
-  }
+  useEffect(() => {
+    setMenuIsOpen(false);
+  }, [setMenuIsOpen]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validation = validateFormData(formData);
-    console.log(validation)
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/collaboration`,
       {
@@ -45,7 +38,7 @@ export default function Collaboration() {
     );
     const data = await res.json();
 
-    if(data.success){
+    if (data.success) {
       toast.success(data.message, {
         position: "top-center",
         autoClose: 5000,
@@ -58,7 +51,7 @@ export default function Collaboration() {
       });
       setFormData({ name: "", email: "", message: "" });
     }
-    else{
+    else {
       toast.error(data.message, {
         position: "top-center",
         autoClose: 5000,
@@ -112,7 +105,6 @@ export default function Collaboration() {
                   autoComplete="off"
                   required
                 />
-                {/* {error && <span className="error-message">{error.message}</span>} */}
               </div>
               <div>
                 <label

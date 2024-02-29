@@ -12,10 +12,10 @@ import { useContext, useEffect } from "react";
 
 
 export default function Home() {
-  const {menuIsOpen , setMenuIsOpen} = useContext(globalContext);
+  const {setMenuIsOpen} = useContext(globalContext);
   useEffect(()=>{
     setMenuIsOpen(false);
-  },[])
+  },[setMenuIsOpen])
   
   return (
     <>
