@@ -21,7 +21,7 @@ const Topproject = () => {
       <Link href="#" className="pt-10">
         <button
           type="button"
-          className="capitalize border-[3px] rounded-full py-4 px-10 lg:text-xl text-lg border-primary mx-auto text-primary hover:bg-primary hover:text-tlight  dark:text-white "
+          className="capitalize border-[3px] rounded-full py-4 px-10 lg:text-xl text-lg border-primary mx-auto text-primary hover:bg-primary hover:text-tlight shadow-lg shadow-gray-400 dark:shadow-gray-600 dark:hover:shadow-primary/70 hover:shadow-60 dark:text-white "
         >
           show more
         </button>

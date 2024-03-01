@@ -12,19 +12,22 @@ const Socialcontect = () => {
       </div>
       <div className="flex gap-5 m-5">
         <Link
-          href="#"
+          href="https://www.instagram.com/nirex_akay/"
+          target="_blank"
           className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary"
         >
           <FaInstagram size={30} className="group-hover:fill-red-500 " />
         </Link>
         <Link
-          href="#"
+          href="https://www.linkedin.com/in/ashish-kumar-a82985220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
           className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary"
         >
           <FaLinkedin size={30} className="group-hover:fill-blue-900 " />
         </Link>
         <Link
-          href="#"
+          href="https://github.com/NIREX-mig"
+          target="_blank"
           className=" group border-[3px] border-secondary p-3 rounded-full hover:bg-secondary"
         >
           <FaGithub size={30} className="group-hover:fill-black " />
