@@ -4,7 +4,7 @@
 import globalContext from "@/context/context";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Navbar = () => {
@@ -13,12 +13,26 @@ const Navbar = () => {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(()=>{
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setDarkMode(true)
+      document.documentElement.classList.add('dark')
+    } else {
+      setDarkMode(false)
+      document.documentElement.classList.remove('dark')
+    }
+  },[setDarkMode])
+
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
-    darkMode
-      ? document.documentElement.classList.remove("dark")
-      : document.documentElement.classList.add("dark");
-  };
+    if (darkMode) {
+      localStorage.theme = 'light'
+      document.documentElement.classList.remove("dark")
+    } else {
+      localStorage.theme = 'dark'
+      document.documentElement.classList.add("dark");
+    }
+  }
 
   return (
     <header className="flex flex-col border-b border-gray-200  py-6 lg:px-20 px-5 dark:bg-bdark dark:border-b-[1px] dark:border-gray-800">
@@ -68,22 +82,18 @@ const Navbar = () => {
             />
           )}
           <div
-            className={`flex flex-col gap-2 cursor-pointer justify-center items-end lg:hidden w-14 h-12 p-2 ${
-              menuIsOpen && "z-[101]"
-            } `}
+            className={`flex flex-col gap-2 cursor-pointer justify-center items-end lg:hidden w-14 h-12 p-2 ${menuIsOpen && "z-[101]"
+              } `}
             onClick={() => setMenuIsOpen(!menuIsOpen)}
           >
             <span
-              className={`bg-black ${
-                menuIsOpen ? "w-[80%]" : "w-full"
-              } h-1 rounded-full ${
-                menuIsOpen && "rotate-45 translate-y-2 duration-300"
-              } duration-300 dark:bg-white`}
+              className={`bg-black ${menuIsOpen ? "w-[80%]" : "w-full"
+                } h-1 rounded-full ${menuIsOpen && "rotate-45 translate-y-2 duration-300"
+                } duration-300 dark:bg-white`}
             ></span>
             <span
-              className={`bg-black w-[80%] h-1 rounded-full ${
-                menuIsOpen && "-rotate-45 -translate-y-1 duration-300"
-              } duration-300 dark:bg-white`}
+              className={`bg-black w-[80%] h-1 rounded-full ${menuIsOpen && "-rotate-45 -translate-y-1 duration-300"
+                } duration-300 dark:bg-white`}
             ></span>
           </div>
         </div>
