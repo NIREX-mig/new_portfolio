@@ -112,7 +112,7 @@ export default function Collaboration() {
                   autoComplete="off"
                   required
                 />
-                {errors.name && <span className="text-red-500 py-10">{errors.name}</span>}
+                {errors.name && <span className="text-red-500">{errors.name}</span>}
               </div>
               <div>
                 <label
@@ -132,7 +132,7 @@ export default function Collaboration() {
                   autoComplete="off"
                   required
                 />
-                {errors.email && <span className="text-red-500 py-10">{errors.email}</span>}
+                {errors.email && <span className="text-red-500">{errors.email}</span>}
               </div>
               <div>
                 <label
@@ -151,7 +151,7 @@ export default function Collaboration() {
                   placeholder="Write your thoughts here..."
                   required
                 ></textarea>
-                {errors.message && <span className="text-red-500 py-10">{errors.message}</span>}
+                {errors.message && <span className="text-red-500">{errors.message}</span>}
               </div>
             </div>
             <button
