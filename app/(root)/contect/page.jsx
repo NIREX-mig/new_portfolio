@@ -1,6 +1,7 @@
 "use client";
 
 import globalContext from "@/context/context";
+import { validation } from "@/utils/validator";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
@@ -13,48 +14,55 @@ export default function Contect() {
   });
   const { setMenuIsOpen } = useContext(globalContext);
 
+  const [errors, setErrors] = useState({});
+
   useEffect(() => {
     setMenuIsOpen(false);
   }, [setMenuIsOpen]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contect`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      }),
-    });
-    const data = await res.json();
-    if (data.success) {
-      toast.success(data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
+    const validationResult = validation(formData);
+    setErrors(validationResult)
+
+    if (validationResult.success) {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contect`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
-      setFormData({ name: "", email: "", message: "" });
-    }
-    else {
-      toast.error(data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      const data = await res.json();
+      if (data.success) {
+        toast.success(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      }
+      else {
+        toast.error(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     }
   };
 
@@ -98,6 +106,7 @@ export default function Contect() {
                   autoComplete="off"
                   required
                 />
+                {errors.name && <span className="text-red-500 py-10">{errors.name}</span>}
               </div>
               <div>
                 <label
@@ -117,6 +126,7 @@ export default function Contect() {
                   autoComplete="off"
                   required
                 />
+                {errors.email && <span className="text-red-500 py-10">{errors.email}</span>}
               </div>
               <div>
                 <label
@@ -136,6 +146,7 @@ export default function Contect() {
                   autoComplete="off"
                   required
                 ></textarea>
+                {errors.message && <span className="text-red-500 py-10">{errors.message}</span>}
               </div>
             </div>
             <button
