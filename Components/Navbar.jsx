@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="flex justify-between dark:bg-bdark">
         <Link href="/">
           <Image
-            src="/logo_light.png"
+            src={darkMode ? "/logo_dark.png" : "/logo_light.png"}
             alt="logo"
             width={90}
             height={90}

@@ -7,7 +7,7 @@ const AboutSelf = () => {
         </h4>
 
         <h4 className="capitalize lg:text-xl text-base text-center text-tlight pb-20">
-          Since beginning my journey as a freelance designer 12 years ago, I&#39;ve done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I&#39;m quietly confident, naturally curious, and perpetually working on improving my chops.
+          Since beginning my journey as a freelance devloper, I&#39;ve done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I&#39;m quietly confident, naturally curious, and perpetually working on improving my chops.
         </h4>
       </div>
     </section>
