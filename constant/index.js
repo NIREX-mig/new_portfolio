@@ -74,3 +74,47 @@ export const techtools = [
     src: "/assets/ubuntu.svg",
   },
 ];
+
+
+export const knowledges = [
+  {
+    id : 1,
+    name : "HTML"
+  },
+  {
+    id : 2,
+    name : "CSS"
+  },
+  {
+    id : 3,
+    name : "JavaScript"
+  },
+  {
+    id : 4,
+    name : "Tailwind CSS"
+  },
+  {
+    id : 5,
+    name : "Reactjs"
+  },
+  {
+    id : 6,
+    name : "Nextjs"
+  },
+  {
+    id : 7,
+    name : "Mongodb"
+  },
+  {
+    id : 8,
+    name : "Express"
+  },
+  {
+    id : 9,
+    name : "Nodejs"
+  },
+  {
+    id : 10,
+    name : "Redux"
+  },
+]
