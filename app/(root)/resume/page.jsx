@@ -21,7 +21,7 @@ export default function resume() {
     <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-bdark flex gap-10 " >
       <div className="bg-dcard rounded-lg text-white pb-10 lg:w-[40%] w-full">
         <Image src="" alt="" width={100} height={100} className="" />
-        <h3 className="text-2xl font-semibold text-center">Ashish Kumar</h3>
+        <h3 className="text-2xl text-center">Ashish Kumar</h3>
         <div className="text-center mt-3 ">
           <p className="text-sm inline text-center bg-gray-200/20 px-4 py-2 mx-3 rounded-md">
             Full Stack Devloper
@@ -81,7 +81,7 @@ export default function resume() {
           <div>
             <div className="flex gap-2 items-center">
               <FaGraduationCap size={30} className="fill-blue-500" />
-              <p className="text-lg font-semibold">Education</p>
+              <p className="text-lg">Education</p>
             </div>
             <div className="[&>*:nth-child(odd)]:bg-gray-600/20 [&>*:nth-child(even)]:bg-bdark/40">
               <ResumeCard session="2020-2023" company="Bacholar of Computer Application" address="LNMU, Darbhanga, Bihar" />
@@ -92,17 +92,17 @@ export default function resume() {
           <div>
             <div className="flex gap-2 items-center">
               <CiBag1 size={30} className="fill-blue-500" />
-              <p className="text-lg font-semibold">Experience</p>
+              <p className="text-lg">Experience</p>
             </div>
             <div className="[&>*:nth-child(odd)]:bg-bdark/40 [&>*:nth-child(even)]:bg-gray-600/20">
               <ResumeCard company="Fresher" />
             </div>
           </div>
           <div>
-            <p className="text-lg font-semibold">Working Skills</p>
+            <p className="text-lg ">Working Skills</p>
           </div>
           <div>
-            <p className="text-lg font-semibold">Knowledges</p>
+            <p className="text-lg">Knowledges</p>
             <div className="mt-2">
               {
                 knowledges.map((knowledge) => {
@@ -115,58 +115,6 @@ export default function resume() {
           </div>
         </div>
       </div>
-
-      {/* <div className=" flex justify-end mb-10">
-        
-      </div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 shadow-lg shadow-black/25 rounded-lg dark:bg-dcard">
-        <Image
-          src="/assets/Study.png"
-          alt="technical knowlege"
-          width={450}
-          height={450}
-          className=""
-        />
-        <div className="grid lg:grid-cols-2 grid-row-2 dark:bg-dcard">
-          <div className="border p-3 dark:border-gray-700">
-            <div className="flex items-center lg:gap-5 gap-3 dark:text-white">
-              <div className="bg-secondary flex justify-center items-center lg:w-10 lg:h-10  w-8 h-8 p-2 rounded-full">
-                <FaBookOpen size={25} className="w-5 h-5 dark:fill-black" />
-              </div>
-              <h3 classame="">Technical Knowledge</h3>
-            </div>
-            <div className="p-5 dark:bg-dcard">
-              <ul className={"list-disc list-inside text-sm dark:text-white"}>
-                <li>Operating System</li>
-                <li>Data Structure Using Java</li>
-                <li>Database Management System</li>
-                <li>Computer Networks</li>
-                <li>MERN Stack</li>
-                <li>HTML, CSS, Javascript, Java</li>
-                <li>Android App Using React Native</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border p-3 dark:border-gray-700 w-full">
-            <div className="flex items-center lg:gap-5 gap-3 dark:text-white">
-              <div className="bg-secondary  flex justify-center items-center lg:w-10 lg:h-10  w-8 h-8 p-2 rounded-full">
-                <PiGraduationCapFill size={25} className="dark:fill-black" />
-              </div>
-              <h3 classame="">Education</h3>
-            </div>
-            <div className="p-5 dark:bg-dcard ">
-              <ul className={"list-disc list-inside text-sm dark:text-white"}>
-                <li>Bacholar of Computer Applications</li>
-                <p className="pt-2 px-6">C.M College,Darbhanga</p>
-                <p className="px-6">Lalit Narayan Mithila University</p>
-                <li className="pt-3">10th and 12th</li>
-                <p className="pt-2 px-6">+2 Dev Narayan High School,Panchobh</p>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 }
