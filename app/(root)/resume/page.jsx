@@ -71,7 +71,7 @@ export default function resume() {
           className="cursor-default"
         >
           <button
-            className="bg-accent/50 flex gap-1 items-center justify-center px-4 py-2 mt-4 mx-auto rounded-lg hover:bg-accent/80"
+            className="bg-accent/50 flex gap-1 items-center justify-center px-4 py-2 mt-4 mx-auto rounded-lg hover:bg-accent/80 hover:-translate-y-[2px] active:transtalte-y-0"
           >
             <MdDownload size={20} />
             Download Resume
