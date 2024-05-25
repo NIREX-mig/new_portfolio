@@ -19,8 +19,8 @@ const Techstack = () => {
                   key={i}
                   src={techstack.src}
                   alt={techstack.alt}
-                  width={100}
-                  height={100}
+                  width={60}
+                  height={60}
                   className={`p-3 dark:${techStacks.style}`}
                 />
               );
@@ -41,8 +41,8 @@ const Techstack = () => {
                   key={i}
                   src={techstack.src}
                   alt={techstack.alt}
-                  width={100}
-                  height={100}
+                  width={50}
+                  height={50}
                   className={`p-3 dark:${techStacks.style}`}
                 />
               );
