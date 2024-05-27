@@ -117,4 +117,13 @@ export const knowledges = [
     id : 10,
     name : "Redux"
   },
+];
+
+export const projectData = [
+  {
+    summary : "",
+    livelink : "",
+    codelink : "",
+    img : ""
+  }
 ]

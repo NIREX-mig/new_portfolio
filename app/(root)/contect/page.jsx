@@ -83,7 +83,7 @@ export default function Contect() {
         alt="svg"
         width={100}
         height={100}
-        className="mx-auto lg:-translate-y-16 -translate-y-14 p-5 lg:p-0 "
+        className="mx-auto lg:-translate-y-16 -translate-y-14 p-5 lg:p-0  "
       />
       <div className="">
         <h3 className="text-center lg:text-3xl text-base font-[EuroStyle Normal] font-semibold dark:text-white">
