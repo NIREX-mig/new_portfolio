@@ -25,7 +25,7 @@ export default function resume() {
   return (
     <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-bdark flex lg:flex-row flex-col gap-10 " >
       <div className="bg-dcard rounded-lg text-white pb-10 lg:w-[40%] w-full">
-        <Image src="/img1.jpg" alt="Image" width={200} height={200} className="mx-auto rounded-md mt-8 w-auto h-auto" />
+        <Image src="/img1.webp" alt="Image" width={200} height={200} className="mx-auto rounded-md mt-8 w-auto h-auto" />
         <h3 className="text-2xl text-center">Ashish Kumar</h3>
         <div className="text-center mt-3 ">
           <p className="text-sm inline text-center bg-gray-200/20 px-4 py-2 mx-3 rounded-md">
