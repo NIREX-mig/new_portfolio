@@ -79,13 +79,13 @@ export default function resume() {
         </Link>
       </div>
 
-      <div className="bg-dcard rounded-lg text-white p-8 w-full">
+      <div className="bg-dcard rounded-lg text-white p-8 w-full ">
         <div className="">
           <h1 className="text-3xl font-semibold">Resume </h1>
           <span className="h-1 w-12 line"></span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-5 lg:h-[29rem] overflow-y-scroll mt-2">
+        <div className="grid lg:grid-cols-2 gap-5 lg:h-[33rem] overflow-y-scroll mt-2">
           <div>
             <div className="flex gap-2 items-center">
               <FaGraduationCap size={30} className="fill-blue-500" />
