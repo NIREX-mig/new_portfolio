@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       setDarkMode(true)
       document.documentElement.classList.add('dark')
@@ -21,7 +21,7 @@ const Navbar = () => {
       setDarkMode(false)
       document.documentElement.classList.remove('dark')
     }
-  },[setDarkMode])
+  }, [setDarkMode])
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -41,8 +41,8 @@ const Navbar = () => {
           <Image
             src={darkMode ? "/logo_dark.png" : "/logo_light.png"}
             alt="logo"
-            width={90}
-            height={90}
+            width={70}
+            height={70}
             priority
             className="w-auto h-auto"
           />

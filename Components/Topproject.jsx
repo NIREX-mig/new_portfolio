@@ -15,7 +15,7 @@ const Topproject = () => {
         <Card />
         <Card />
       </div>
-      <Link href="/topprojects" className="pt-10">
+      <Link href="/projects" className="pt-10">
         <button
           type="button"
           className="border-primary border-2 appearance-none cursor-pointer inline-block leading-normal outline-none text-center no-underline select-none touch-manipulation will-change-transform px-10 py-2 text-xl text-black rounded-full tg disabled:pointer-events-none hover:bg-primary hover:shadow-md hover:-translate-y-[2px] active:translate-y-0 active:shadow-none  lg:text-xl hover:text-tlight dark:text-white  "
