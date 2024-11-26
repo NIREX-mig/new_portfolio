@@ -14,7 +14,7 @@ const Collaboration = () => {
       <Link href="/collaboration">
         <button
           type="button"
-          className="border-primary border-2 appearance-none cursor-pointer leading-normal outline-none text-center no-underline select-none touch-manipulation will-change-transform px-10 py-2 text-xl text-white rounded-full tg disabled:pointer-events-none hover:bg-primary hover:shadow-md hover:-translate-y-[2px] active:translate-y-0 active:shadow-none  lg:text-xl hover:text-tlight dark:text-white flex gap-2 items-center mb-20"
+          className="border-primary border-2 appearance-none cursor-pointer leading-normal outline-none text-center no-underline select-none touch-manipulation will-change-transform px-10 py-2 text-xl text-black rounded-full tg disabled:pointer-events-none hover:bg-primary hover:shadow-md hover:-translate-y-[2px] active:translate-y-0 active:shadow-none  lg:text-xl hover:text-tlight dark:text-white flex gap-2 items-center mb-20"
         >
           <MdChat size={25} />
           Start a conversation
