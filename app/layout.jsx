@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
+import { AOSInit } from './aos'
 
 const poppins = Poppins({
   weight: "500",
@@ -19,6 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <AOSInit />
       <body className={poppins.className}>
         <NextTopLoader
           color="#2299DD"

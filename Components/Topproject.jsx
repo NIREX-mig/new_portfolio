@@ -4,7 +4,7 @@ import Card from "./Card";
 const Topproject = () => {
   return (
     <seciton className=" flex flex-col items-center border dark:border-gray-800 lg:py-20 py-16 dark:bg-bdark">
-      <h3 className="capitalize lg:text-4xl text-2xl font-bold text-center font-[EuroStyle Normal] pb-4 line dark:text-white">
+      <h3 className="capitalize lg:text-4xl text-2xl font-bold text-center font-[EuroStyle Normal] pb-4 line dark:text-white" data-aos="fade-down">
         my projects
       </h3>
       <p className="lg:text-xl text-base text-center text-gray-700 pb-10 px-5 dark:text-white">
@@ -18,9 +18,9 @@ const Topproject = () => {
       <Link href="/projects" className="pt-10">
         <button
           type="button"
-          className="border-primary border-2 appearance-none cursor-pointer inline-block leading-normal outline-none text-center no-underline select-none touch-manipulation will-change-transform px-10 py-2 text-xl text-black rounded-full tg disabled:pointer-events-none hover:bg-primary hover:shadow-md hover:-translate-y-[2px] active:translate-y-0 active:shadow-none  lg:text-xl hover:text-tlight dark:text-white  "
+          className=" cursor-pointer text-center px-10 py-3 text-xl text-white rounded-lg bg-primary lg:text-xl tracking-wide hover:bg-white hover:text-black"
         >
-          show more
+          Show More
         </button>
       </Link>
     </seciton>

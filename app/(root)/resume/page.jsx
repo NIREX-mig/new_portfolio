@@ -16,6 +16,7 @@ import Progressbar from "@/Components/Progressbar";
 
 
 export default function resume() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { setMenuIsOpen } = useContext(globalContext);
 
   useEffect(() => {
@@ -25,8 +26,8 @@ export default function resume() {
   return (
     <section className=" lg:px-20 p-3 py-8 pb-20 dark:bg-bdark flex lg:flex-row flex-col gap-10 " >
       <div className="bg-dcard rounded-lg text-white pb-10 lg:w-[40%] w-full">
-        <Image src="/img1.webp" alt="Image" width={200} height={200} className="mx-auto rounded-md mt-8 w-auto h-auto" />
-        <h3 className="text-2xl text-center">Ashish Kumar</h3>
+        <Image src="/img1.webp" alt="Image" width={250} height={200} className="mx-auto rounded-md mt-8" />
+        <h3 className="text-2xl text-center mt-5">Ashish Kumar</h3>
         <div className="text-center mt-3 ">
           <p className="text-sm inline text-center bg-gray-200/20 px-4 py-2 mx-3 rounded-md">
             Full Stack Devloper
@@ -92,7 +93,7 @@ export default function resume() {
               <p className="text-lg">Education</p>
             </div>
             <div className="[&>*:nth-child(odd)]:bg-gray-600/20 [&>*:nth-child(even)]:bg-bdark/40">
-              <ResumeCard session="2020-2023" company="Bacholar of Computer Application" address="LNMU, Darbhanga, Bihar" />
+              <ResumeCard session="2020-2023" company="Bacholar of Computer Application" address="Lalit Naraya Mithila University, Darbhanga, Bihar" />
               <ResumeCard session="2018-2020" company="Intermediate" address="+2 D.N High School, Panchobh" />
               <ResumeCard session="2017-2018" company="Secondary" address="+2 D.N High School, Panchobh" />
             </div>

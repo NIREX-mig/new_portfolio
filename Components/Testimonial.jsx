@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Scrollbar } from 'swiper/modules';
+import { Autoplay, Pagination, Scrollbar } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -13,20 +13,25 @@ const Testimonial = () => {
 
   return (
     <section className="border py-36 dark:bg-bdark dark:border-gray-800">
-      <h3 className="lg:text-4xl text-xl font-bold font-[EuroStyle Normal] text-center pb-4 dark:text-white">
+      <h3 className="lg:text-4xl text-xl font-bold font-[EuroStyle Normal] text-center pb-4 dark:text-white" data-aos="fade-down">
         Testimonials
       </h3>
-      <p className="lg:text-xl text-sm text-center text-gray-700 pb-10 px-10 dark:text-white">
+      <p className="lg:text-xl text-sm text-center text-gray-700 pb-10 px-10 dark:text-white" data-aos="zoom-in">
         People I&#39;ve worked with have said some nice things...
       </p>
       <div className="w-full mx-auto dark:bg-bdark">
         <Swiper
           className="lg:w-[85%] w-[95%] dark:bg-bdark"
-          modules={[ Pagination, Scrollbar]}
+          modules={[Autoplay, Pagination, Scrollbar]}
+          autoplay={{
+            delay: 6500,
+            disableOnInteraction: false,
+          }}
           spaceBetween={50}
           slidesPerView={1}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          navigation={true}
         >
           <SwiperSlide className="p-10">
             <Image
@@ -64,7 +69,7 @@ const Testimonial = () => {
               <p className="text-sm dark:text-white" >Nyrex devloper</p>
             </div>
           </SwiperSlide>
-          
+
         </Swiper>
       </div>
     </section>

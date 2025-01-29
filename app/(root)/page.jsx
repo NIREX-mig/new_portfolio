@@ -1,7 +1,6 @@
 'use client';
 
 import AboutSelf from "@/Components/AboutSelf";
-import Collaboration from "@/Components/Collaboration";
 import Hello from "@/Components/Hello";
 import Techstack from "@/Components/Techstack";
 import Testimonial from "@/Components/Testimonial";
@@ -23,7 +22,6 @@ export default function Home() {
       <AboutSelf/>
       <Techstack/>
       <Topproject/>
-      <Collaboration/>
       <Testimonial/>
     </>
   );
