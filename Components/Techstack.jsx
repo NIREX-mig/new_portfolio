@@ -9,7 +9,7 @@ const Techstack = () => {
           <h3 className="capitalize lg:text-3xl text-2xl font-bold font-[EuroStyle Normal] pb-2 line dark:text-white" data-aos="fade-down">
             tech stack
           </h3>
-          <p className="lg:text-lg text-base text-gray-700 pb-8 dark:text-white">
+          <p className="lg:text-lg text-base  pb-8 dark:text-white">
             Technologies I&#39;ve been working with recently
           </p>
           <div className="grid lg:grid-cols-8 grid-cols-2 gap-5 justify-between">

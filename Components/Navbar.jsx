@@ -35,17 +35,19 @@ const Navbar = () => {
   }
 
   return (
-    <header className="flex flex-col border-b border-gray-200  py-6 lg:px-20 px-5 dark:bg-bdark dark:border-b-[1px] dark:border-gray-800">
+    <header className="flex flex-col border-b border-gray-200  py-4 lg:px-20 px-5 dark:bg-bdark dark:border-b-[1px] dark:border-gray-800">
       <div className="flex justify-between dark:bg-bdark">
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-3">
           <Image
-            src={darkMode ? "/logo_dark.png" : "/logo_light.png"}
+            // src={darkMode ? "/logo_dark.png" : "/logo_light.png"}
+            src="/assets/nirex-avatar.svg"
             alt="logo"
-            width={70}
-            height={70}
+            width={50}
+            height={100}
             priority
-            className="w-auto h-auto"
+            className=""
           />
+          <h1 className="text-black dark:text-white text-xl tracking-widest font-semibold ">Portfolio</h1>
         </Link>
 
         <div className="flex gap-2 items-center dark:bg-bdark">
@@ -99,30 +101,30 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {menuIsOpen && (
-        <section className="absolute lg:hidden top-5 right-0 w-full h-[200px] z-[100]  backdrop-blur-lg bg-accent/50">
-          <div className="w-full mt-14 p-5 flex flex-col justify-center items-center border-t-[1px] border-black">
-            <nav className="py-2">
-              <Link
-                href="/resume"
-                className="text-xl font-bold pr-5 hover:text-primary dark:text-white "
+
+      {/* mobile nav */}
+      <section className={`${!menuIsOpen ? "absolute right-0 -translate-y-44 duration-300" : " absolute translate-y-16 right-0 w-full duration-300"} lg:hidden w-full z-[100] bg-dcard`}>
+        <div className="w-full p-5 flex flex-col justify-center items-center">
+          <nav className="py-2">
+            <Link
+              href="/resume"
+              className="text-lg pr-5 hover:text-primary dark:text-white "
+            >
+              Resume
+            </Link>
+          </nav>
+          <nav className="py-2">
+            <Link href="/contect">
+              <button
+                type="button"
+                className="border-[3px]  capitalize text-sm border-primary text-primary rounded-full px-10 py-2 hover:bg-primary hover:text-tlight dark:text-white"
               >
-                Resume
-              </Link>
-            </nav>
-            <nav className="py-2">
-              <Link href="/contect">
-                <button
-                  type="button"
-                  className="border-[3px]  capitalize text-lg border-primary text-primary rounded-full px-10 py-2 hover:bg-primary hover:text-tlight dark:text-white"
-                >
-                  say hello
-                </button>
-              </Link>
-            </nav>
-          </div>
-        </section>
-      )}
+                Say Hello
+              </button>
+            </Link>
+          </nav>
+        </div>
+      </section>
     </header>
   );
 };

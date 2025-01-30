@@ -5,7 +5,7 @@ const AboutSelf = () => {
   return (
     <section className="bg-primary lg:pb-36 py-24 ">
       <div className=" mb-20 w-full">
-        <div className=" w-[90%] mx-auto flex items-center gap-5">
+        <div className=" w-[90%] mx-auto flex lg:flex-row flex-col items-center gap-5">
           <Image src={aboutImg} alt="img" width={400} height={100} data-aos="fade-right" />
           <div>
             <h4 className=" lg:text-5xl text-2xl font-[EuroStyle Normal] text-center text-tlight pb-10" data-aos="zoom-in">
