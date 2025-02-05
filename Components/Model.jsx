@@ -20,8 +20,8 @@ const Model = ({ modelIsOpen, setModelIsOpen }) => {
             <div className="flex gap-5">
                 <div className='dark:bg-bdark bg-white max-w-[50rem] w-full max-h-[90vh] overflow-y-auto p-5 dark:text-gray-200 rounded-sm'>
                     <Image src={modelData?.thumbnail} unoptimized={true} width={100} height={100} alt='project-img' className='w-full rounded-lg' />
-                    <div className='flex gap-5'>
-                        <div className='w-[70%] font-[EuroStyle Normal]'>
+                    <div className='flex lg:flex-row flex-col gap-5'>
+                        <div className='lg:w-[70%] w-full font-[EuroStyle Normal]'>
                             <div className='mt-5'>
                                 <p className='text-3xl font-sans mb-2'>{modelData?.name}</p>
                                 <p className='text-sm'>{modelData?.category}</p>
