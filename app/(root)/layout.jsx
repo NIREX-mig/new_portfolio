@@ -44,8 +44,8 @@ export default function RootLayout({ children }) {
           ]}
           showSystemCursor={true}
           outerStyle={{
-            backgroundColor: "whitesmoke",
-            mixBlendMode: 'exclusion'
+            backgroundColor: "#fff",
+            mixBlendMode: 'exclusion',
           }
           }
         />

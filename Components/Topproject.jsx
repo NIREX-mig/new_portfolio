@@ -1,9 +1,17 @@
 import Link from "next/link";
 import Card from "./Card";
+import { Top3Projects } from "@/constant/projects";
+import Model from "./Model";
+import { useContext } from "react";
+import globalContext from "@/context/context";
 
 const Topproject = () => {
+
+  const { modelIsOpen, setModelIsOpen } = useContext(globalContext);
+
   return (
     <seciton className=" flex flex-col items-center border dark:border-gray-800 lg:py-20 py-16 dark:bg-bdark">
+      <Model modelIsOpen={modelIsOpen} setModelIsOpen={setModelIsOpen} />
       <h3 className="capitalize lg:text-4xl text-2xl font-bold text-center font-[EuroStyle Normal] pb-4 line dark:text-white text-black" data-aos="fade-down">
         my projects
       </h3>
@@ -11,9 +19,11 @@ const Topproject = () => {
         Here are a few past design projects I&#39;ve worked on.
       </p>
       <div className="p-2 lg:w-[95%] w-[98%] grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 jc">
-        <Card category="web-app" lable="Demo app" thumbnail="/img1.webp" />
-        <Card category="web-app" lable="Demo app" thumbnail="/img1.webp" />
-        <Card category="web-app" lable="Demo app" thumbnail="/img1.webp" />
+        {
+          Top3Projects.map((item, index) => {
+            return <Card key={index} data={item} />
+          })
+        }
       </div>
       <Link href="/projects" className="pt-10">
         <button

@@ -101,12 +101,3 @@ export const knowledges = [
     name: "Redux"
   },
 ];
-
-export const projectData = [
-  {
-    summary: "",
-    livelink: "",
-    codelink: "",
-    img: ""
-  }
-]
